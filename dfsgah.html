@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../media/rty.js"></script>
+    <script src="../media/ss.js"></script>
+    <link rel="stylesheet" href="Package.css">
+    <title>Go</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="#"><img src="../media/logo.png" alt="Logo"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Package.html">Package</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <a class="icons" href="#Cart"><img src="../media/cart.svg" alt="Cart"></a>
+        <a class="icons" href="Signin.html">Signin</a>
+    </header>
+    <main>
+        <p>Your packages will be shown below</p>
+        <div class="package">
+            <div class="col1">
+                <img id="userUploadedPic" alt="User uploaded picture">
+            </div>
+            <div class="col2">
+                <p>Your product description</p>
+            </div>
+            <div class="col3">
+                <p>GHS 15</p>
+            </div>  
+        </div>
+        <div class="package">
+            <div class="col1">
+                <img id="picture" alt="Product picture">
+            </div>
+            <div class="col2">
+                <p>Your product description</p>
+            </div>
+            <div class="col3">
+                <p>GHS 15</p>
+            </div>
+        </div>
+    </main>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const pic = localStorage.getItem('pic');
+                const img = document.getElementById('userUploadedPic');
+                img.src = pic;
+                const newImg = document.getElementById('picture');
+                newImg.src = pic;
+            
+        });
+    </script>
+</body>
+</html>

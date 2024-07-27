@@ -1,0 +1,104 @@
+*{
+    font-family: manrope;
+    margin: 0;
+}
+@font-face {
+    font-family: "Manrope";
+    src:
+      local("Manrope"),
+      url("manrope-extrabold.otf")
+}
+body{
+    background-color: #F1F3F4;
+    align-items: center;
+}
+header{
+    margin: 20px;
+    display: flex;
+    align-items: center;
+}
+logo{
+    padding-left: 80px;
+}
+logo img{
+    width: 50px;
+    height: 50px;
+}
+nav{
+    font-size: 16px;
+    flex: 1;
+    text-align: right;
+    padding-right: 10px;
+}
+nav ul li{
+    display: inline-block;
+    padding: 20px;
+    position:relative;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    color:coral;
+}
+.icons{
+    padding: 10px;
+    color: azure;
+    background: coral;
+    border: 1px solid coral;
+    border-radius: 30px;
+    padding-right: 10px;
+    margin-right: 10px;
+}
+main{
+    display: grid;
+    justify-content: center;
+    margin: 110px;
+    align-content: center;
+    align-items: center;
+
+}
+
+main form input, p, button{
+    padding: 5px;
+    width: 90%;
+}
+form{
+    display: grid;
+    margin: 20px;
+    justify-content: center;
+    border: 1px solid #585656;
+    border-radius: 5px;
+    padding: 50px;
+}
+main form p{
+    padding-left: 0px;
+}
+h2{
+    margin-bottom: 20px;
+}
+button#submit{
+    text-align: center;
+    padding: 5px;
+    border: 1px solid #B3B3B3;
+    margin-top: 8px;
+    border-radius: 10px;
+    width: 90%;
+    background-color: #2C2C2C;
+    color: azure;
+}
+#schedule{
+    width: 200px;
+}
+/*
+form{
+    display: flex;
+    position: absolute;
+    right: 50%;
+    top: 30%;
+    align-items: center;
+    align-content: center;
+    border: 1px solid #585656;
+    padding: 50px;
+    width: 200px;
+    height: 250px;
+}

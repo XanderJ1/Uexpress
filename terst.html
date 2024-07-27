@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="terst.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Page</title>
+</head>
+<body>
+    <h1>Submitted Data</h1>
+    <p id="displayName"></p>
+    <p id="displayLastname"></p>
+    <p id="displayEmail"></p>
+    <p id="displayPhone"></p>
+    <p id="displayPic"></p>
+
+    <script>
+        // Retrieve data from local storage
+        const name = localStorage.getItem('name');
+        const lastname = localStorage.getItem('lastname');
+        const email = localStorage.getItem('email');
+        const phone = localStorage.getItem('phone');
+        const pic = localStorage.getItem('pic');
+
+        // Display data //
+        document.getElementById('displayName').textContent = `Name: ${name}`;
+        document.getElementById('displayLastname').textContent = `Lastname: ${lastname}`;
+        document.getElementById('displayEmail').textContent = `Email: ${email}`;
+        document.getElementById('displayPhone').textContent = `Phone: ${phone}`;
+        if (pic) {
+            const img = document.createElement('img');
+            img.src = pic;
+            img.alt = 'User uploaded picture';
+            document.getElementById('displayPic').appendChild(img);
+        }
+    </script>
+</body>
+</html>

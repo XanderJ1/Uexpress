@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="PackageAdmin.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Go</title>
+</head>
+<body>
+    <header>
+        <logo>
+            <a href="#"><img src="../media/logo.png"></a>
+        </logo>
+        <nav>
+            <ul>
+                <li><a href="index.html"><h3>Home</h3></a></li>
+                <li><a href="Package.html"><h3>Package</h3></a></li>
+                <li><a href="Contact.html"><h3>Contact</h3></a></li>
+                <li><a class="SignUp" href="SignUp.html">SignUp</a></li>
+                <li><a class="SignUp" href="Signin.html">Login</a></li>
+            </ul>
+        </nav>
+        <div class="toggle">
+            <img src="../media/bar.svg">
+        </div>
+        <div class="drop">
+            <ul>
+                <li><a href="index.html"><h3>Home</h3></a></li>
+                <li><a href="Package.html"><h3>Package</h3></a></li>
+                <li><a href="Contact.html"><h3>Contact</h3></a></li>
+                <li><a class="SignUp" href="SignUp.html">SignUp</a></li>
+                <li><a class="SignUp" href="Signin.html">Login</a></li>
+            </ul> 
+        </div>
+    </header>
+    <main>
+        <form id="dataForm">
+            <p><label for="name">Name</label></p>
+            <input type="text" id="name" name="name">
+            <p><label for="lastname">Last Name</label></p>
+            <input type="text" id="lastname" name="lastName" placeholder="Last name">
+            <p><label for="email">Email</label></p>
+            <input type="email" id="email" name="email">
+            <p><label for="phone">Phone number</label></p>
+            <input type="text" id="phone" name="phone" placeholder="Phone number">
+            <input type="file" id="myFile" name="filename">
+            <input type="textarea" id="desc" name="desc">
+            <button id="submit">Submit</button>
+        </form>
+    </main>
+        <script>
+            document.getElementById('dataForm').addEventListener('submit', function(event) {
+                event.preventDefault();
+    
+                const name = document.getElementById('name').value;
+                const lastname = document.getElementById('lastname').value;
+                const email = document.getElementById('email').value;
+                const phone = document.getElementById('phone').value;
+                const desc = document.getElementById('desc').value;
+                const myFile = document.getElementById('myFile').files[0];
+    
+                // Store data in local storage
+                localStorage.setItem('name', name);
+                localStorage.setItem('lastname', lastname);
+                localStorage.setItem('email', email);
+                localStorage.setItem('phone', phone);
+                localStorage.setItem('desc', desc);
+    
+                if (myFile) {
+                    const reader = new FileReader();
+                    reader.onload = function(event) {
+                        localStorage.setItem('pic', event.target.result);
+                        // Redirect to display.html
+                        window.location.href = 'terst.html';
+                    };
+                    reader.readAsDataURL(myFile);
+                } else {
+                    // Redirect to display.html if no file is selected
+                    window.location.href = 'terst.html';
+                }
+            });
+        </script>
+
+</body>
+</html>

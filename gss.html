@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Page</title>
+</head>
+<body>
+    <h1>Fill Out the Form</h1>
+    <form id="dataForm">
+        <p><label for="name">Name:</label></p>
+        <input type="text" id="name" name="name">
+        <p><label for="lastname">Last Name:</label></p>
+        <input type="text" id="lastname" name="lastName" placeholder="Last name"><p></p>
+        <p><label for="email">Email:</label></p>
+        <input type="email" id="email" name="email">
+        <p><label for="phone">Phone number:</label></p>
+        <input type="text" id="phone" name="phone" placeholder="Phone number">
+        <p><label for="myFile">Picture </label></p>
+        <input type="file" id="myFile" name="filename">
+        <p><button type="submit">Submit</button></p>
+    </form>
+
+    <script>
+        document.getElementById('dataForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const lastname = document.getElementById('lastname').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const myFile = document.getElementById('myFile').files[0];
+
+            // Store data in local storage
+            localStorage.setItem('name', name);
+            localStorage.setItem('lastname', lastname);
+            localStorage.setItem('email', email);
+            localStorage.setItem('phone', phone);
+
+            if (myFile) {
+                const reader = new FileReader();
+                reader.onload = function(event) {
+                    localStorage.setItem('pic', event.target.result);
+                    // Redirect to display.html
+                    window.location.href = 'display.html';
+                };
+                reader.readAsDataURL(myFile);
+            } else {
+                // Redirect to display.html if no file is selected
+                window.location.href = 'display.html';
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="display.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Page</title>
+</head>
+<body>
+    <main>
+        <h1>Delivery Information</h1>
+        <div class="data">
+            <p id="displayName"></p>
+            <p id="displayArea"></p>
+            <p id="displayHostel"></p>
+            <p id="displaySchedule"></p>
+            <p id="displayPic"></p>
+        </div>
+    </main>
+
+
+    <script>
+        // Retrieve data from local storage
+        const name = localStorage.getItem('name');
+        const area = localStorage.getItem('area');
+        const hostel = localStorage.getItem('hostel');
+        const schedule = localStorage.getItem('schedule');
+        const desc = localStorage.getItem('desc');
+        const pic = localStorage.getItem('pic');
+
+        // Display data
+        document.getElementById('displayName').textContent = `Name: ${name}`;
+        document.getElementById('displayArea').textContent = `Area: ${area}`;
+        document.getElementById('displayHostel').textContent = `Hostel: ${hostel}`;
+        document.getElementById('displaySchedule').textContent = `Schedule: ${schedule}`;
+        document.getElementById('desc').textContent = `Schedule: ${desc}`;
+
+        if (pic) {
+            const img = document.createElement('img');
+            img.src = pic;
+            img.alt = 'User uploaded picture';
+            document.getElementById('displayPic').appendChild(img);
+        }
+    </script>
+</body>
+</html>

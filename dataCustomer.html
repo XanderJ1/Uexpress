@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <link rel="stylesheet" type="text/css" href="dataCustomer.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GO</title>
+</head>
+<body>
+   <header>
+    <div class="bill">
+        <h2>Billing</h2>
+        <p>Manage your billing and payments</p>
+    </div>
+    <button onclick="window.print()"><img src="../media/Vector.svg"> Download PDF Report</button>
+   </header>
+   <main>
+    <table>
+        <tr>
+            <th>CUSTOMER</th>
+            <th>AREA</th>
+            <th>HOSTEL</th>
+            <th>SCHEDULE</th>
+            <th>PHONE</th>
+            <th>AMOUNT</th>
+        </tr>
+        <tr>
+            <td id="displayName"></td>
+            <td id="displayArea"></td>
+            <td id="displayHostel"></td>
+            <td id="displaySchedule"></td>
+            <td id="displayphone"></td>
+            <td>3456</td>
+        </tr>
+        <tr>
+            <td id="displayName"></td>
+            <td id="displayArea"></td>
+            <td id="displayHostel"></td>
+            <td id="displaySchedule"></td>
+            <td id="displayphone"></td>
+            <td>3456</td>
+        </tr>
+        <tr>
+            <td id="displayName"></td>
+            <td id="displayArea"></td>
+            <td id="displayHostel"></td>
+            <td id="displaySchedule"></td>
+            <td id="displayphone"></td>
+            <td>3456</td>
+        </tr>
+        <tr>
+            <td id="displayName"></td>
+            <td id="displayArea"></td>
+            <td id="displayHostel"></td>
+            <td id="displaySchedule"></td>
+            <td id="displayphone"></td>
+            <td>3456</td>
+        </tr>
+        <tr>
+            <td id="displayName"></td>
+            <td id="displayArea"></td>
+            <td id="displayHostel"></td>
+            <td id="displaySchedule"></td>
+            <td id="displayphone"></td>
+            <td>3456</td>
+        </tr>
+        <tr>
+            <td id="displayName"></td>
+            <td id="displayArea"></td>
+            <td id="displayHostel"></td>
+            <td id="displaySchedule"></td>
+            <td id="displayphone"></td>
+            <td>3456</td>
+        </tr>
+        <tr>
+            <td id="displayName"></td>
+            <td id="displayArea"></td>
+            <td id="displayHostel"></td>
+            <td id="displaySchedule"></td>
+            <td id="displayphone"></td>
+            <td>3456</td>
+        </tr>
+        <tr>
+            <td id="displayName"></td>
+            <td id="displayArea"></td>
+            <td id="displayHostel"></td>
+            <td id="displaySchedule"></td>
+            <td id="displayphone"></td>
+            <td>3456</td>
+        </tr>
+        <tr>
+            <td id="displayName"></td>
+            <td id="displayArea"></td>
+            <td id="displayHostel"></td>
+            <td id="displaySchedule"></td>
+            <td id="displayphone"></td>
+            <td>3456</td>
+        </tr>
+        <tr>
+            <td id="displayName"></td>
+            <td id="displayArea"></td>
+            <td id="displayHostel"></td>
+            <td id="displaySchedule"></td>
+            <td id="displayphone"></td>
+            <td>3456</td>
+        </tr>
+    </table>
+   </main>
+
+   <script>
+    function display(){
+        window.print();
+    }
+    // Retrieve data from local storage
+    const name = localStorage.getItem('name');
+    const area = localStorage.getItem('area');
+    const hostel = localStorage.getItem('hostel');
+    const schedule = localStorage.getItem('schedule');
+    const phone = localStorage.getItem('phone');
+    // Display data
+    document.getElementById('displayName').textContent = `${name}`;
+    document.getElementById('displayArea').textContent = `${area}`;
+    document.getElementById('displayHostel').textContent = `${hostel}`;
+    document.getElementById('displaySchedule').textContent = `${schedule}`;
+    document.getElementById('displayphone').textContent = `${phone}`;
+</script>
+</body>
+</html>

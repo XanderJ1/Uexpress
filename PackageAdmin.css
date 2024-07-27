@@ -1,0 +1,142 @@
+*{
+    font-family: Manrope;
+    margin: 0;
+}
+
+body{
+    background-color: #F1F3F4;
+}
+header{
+    font-weight: bolder;
+    margin: 10px 5px 80px 1px;
+    display: flex;
+    align-items: center;
+}
+logo{
+    padding-left: 80px;
+}
+logo img{
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+}
+nav{
+    font-size: 17px;
+    flex: 1;
+    text-align: right;
+    padding-right: 50px;
+}
+nav ul li{
+    display: inline-block;
+    padding: 20px;
+    position:relative;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    color:coral;
+}
+nav ul li a:hover {
+    border-bottom: 3px solid coral;
+}
+nav ul li a h3:hover {
+    border-bottom: 3px solid coral;
+}
+ul li a.SignUp{
+    padding: 10px;
+    color: azure;
+    background: coral;
+    border: 1px solid coral;
+    border-radius: 50px;
+}
+.toggle img{
+    color: #fff;
+    font-size: 1.5rem;
+    display: none;
+}
+.drop{
+    display: none;
+}
+@media (max-width: 992px) {
+    nav{
+        display: none;
+    }
+    .toggle img{
+        position: absolute;
+        right: 50px;
+        display: block;
+        cursor: pointer;
+    }
+    /* .drop{
+        position: absolute;
+        right: 50px;
+        top: 5px;
+        height: 0;
+        background: rgb(255, 255, 255,0.1);
+        overflow: hidden;
+    } */
+    /* .drop.open{
+        height: 240px;
+    }
+    .drop li{
+        padding: 0.7rem;
+        display: flex;
+        align-items: center;
+        justify-content: c;
+    } */
+    logo{
+        padding-left: 50px;
+        padding-top: 10px;
+    }
+}
+main{
+    display: grid;
+    margin: 110px;
+    align-content: center;
+    justify-content: center;
+}
+form{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    border: 1px solid #585656;
+    border-radius: 5px;
+    padding: 50px;
+    width: 200px;
+    height: 300px;
+    padding-bottom: 80px;
+}
+form input#myFile{
+    margin: 10px 0px 10px;
+}
+form input, p, button{
+    padding: 5px;
+    width: 100%;
+}
+form p{
+    padding-left: 0px;
+}
+button#submit{
+    text-align: center;
+    padding: 5px;
+    border: 1px solid #B3B3B3;
+    margin-top: 8px;
+    border-radius: 10px;
+    width: 90%;
+    background-color: #2C2C2C;
+    color: azure;
+}
+/*
+form{
+    display: flex;
+    position: absolute;
+    right: 50%;
+    top: 30%;
+    align-items: center;
+    align-content: center;
+    border: 1px solid #585656;
+    padding: 50px;
+    width: 200px;
+    height: 250px;
+}

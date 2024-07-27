@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="billing.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Go</title>
+</head>
+<body>
+    <header>
+        <logo>
+            <a href="#"><img src="../media/logo.png"></a>
+        </logo>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Package.html">Package</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <a class="icons" href="#Cart"><img src="../media/cart.svg"></a>
+        <a class="icons" href="Logout.html">Logout</a>
+    </header>
+    <main>
+        <form id="dataForm">
+            <h2>Your delivery information</h2>
+            <p><label for="name">Name</label></p>
+            <input type="text" id="name" name="name">
+            <p><label for="area">Area</label></p>
+            <input type="text" id="area" name="area" placeholder="Area">
+            <p><label for="hostel">Hostel</label></p>
+            <input type="text" id="hostel" name="hostel" placeholder="Hostel">
+            <p><label for="time">Schedule</label></p>
+            <select name="time" id="schedule">
+                <option value="09:00">09:00</option>
+                <option value="10:00">10:00</option>
+                <option value="11:00">11:00</option>
+                <option value="12:00">12:00</option>
+                <option value="01:00">01:00</option>
+                <option value="02:00">02:00</option>
+                <option value="03:00">03:00</option>
+                <option value="04:00">04:00</option>
+                <option value="05:00">05:00</option>
+            </select>
+            <p><label for="phone">Instruction</label></p>
+            <input type="text" id="phone" name="phone" placeholder="phone">
+            <button id="submit">Submit</button>
+        </form>
+    </main>
+    <script>
+        document.getElementById('dataForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const area = document.getElementById('area').value;
+            const hostel = document.getElementById('hostel').value;
+            const schedule = document.getElementById('schedule').value;
+            const instruction = document.getElementById('phone').value;
+
+            
+            // Store data in local storage
+            localStorage.setItem('name', name);
+            localStorage.setItem('area', area);
+            localStorage.setItem('hostel', hostel);
+            localStorage.setItem('schedule', schedule);
+            localStorage.setItem('phone', phone);
+                // Redirect to display.html if no file is selected
+                window.location.href = 'dataCustomer.html';
+        });
+    </script>
+</body>
+</html>
