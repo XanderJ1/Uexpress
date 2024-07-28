@@ -60,7 +60,7 @@ ul li a.SignUp{
     font-size: 1.5rem;
     display: none;
 }
-.drop{
+.toggle-parent{
     display: none;
 }
 main{
@@ -157,38 +157,6 @@ img{
 }
 
 @media (max-width: 992px) {
-    nav{
-        display: none;
-    }
-    .toggle img{
-        width: 30px;
-        height: 30px;
-        position: absolute;
-        right: 50px;
-        display: block;
-        cursor: pointer;
-    }
-    .drop{
-        position: absolute;
-        right: 50px;
-        top: 5px;
-        height: 0;
-        background: rgb(255, 255, 255,0.1);
-        overflow: hidden;
-    }
-    .drop.open{
-        height: 240px;
-    }
-    .drop li{
-        padding: 0.7rem;
-        display: flex;
-        align-items: center;
-        justify-content: c;
-    }
-    logo{
-        padding-left: 50px;
-        padding-top: 10px;
-    }
     main{
         margin: 50px;
     }
@@ -229,7 +197,7 @@ img{
         margin-bottom: 80px;
     }
     .declare{
-    display: grid;
+        display: grid;
         justify-content: center;
         text-align: center;
         margin-top: 50px;

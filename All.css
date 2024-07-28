@@ -1,0 +1,52 @@
+
+@media (max-width: 992px) {
+    nav{
+        display: none;
+    }
+    header{
+        justify-content: space-between;
+    }
+    logo{
+        padding-left: 50px;
+        padding-top: 10px;
+    }
+    .toggle-parent{
+        display:flex;
+        flex-direction: column;
+        margin-top: 10px;
+        position: relative;
+        top: 55px;
+    }
+    .toggle img{
+        position: absolute;
+        right: 50px;
+        display: block;
+        cursor: pointer;
+    }
+    logo{
+        margin-left: 50px;
+        padding: 10px 0px 0px 0px;
+    }
+    .logo{
+        display: flex;
+        justify-content: center;
+        margin-right: 0px;
+        padding: 10px 0px 0px 0px
+    }
+    .logo img{
+        width: 35px;
+        height: 35px;
+    }
+    ul li a.SignUp {
+        margin: 5px;
+        padding: 5px 5px;
+        background: none;
+        color: coral;
+        border: none;
+    }
+    .drop{
+        display: grid;
+        justify-content: center;
+        list-style: none;
+    }
+}
